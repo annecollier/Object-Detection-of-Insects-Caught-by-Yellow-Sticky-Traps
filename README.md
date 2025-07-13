@@ -4,24 +4,30 @@ Comparative Analysis of EfficientDet, and YOLO for Object Detection of Insects C
 This repository contains the code and notebooks for the project "Comparative Analysis of EfficientDet, and YOLO for Object Detection," by Anne Pereira Collier de Mendonça and Alice Peruniz Oliveira.
 
 **Project Overview**
+
 This project presents a comparative study of single-stage object detectors, specifically EfficientDet and YOLO, for the task of detecting insects on yellow sticky traps. Using the "Yellow Sticky Traps" dataset, which contains over 8,000 labeled instances across three pest species, the study evaluates each architecture's performance in a challenging scenario characterized by small object size and high density.
 
 The analysis demonstrates that while YOLOv4 establishes a functional baseline and EfficientDet shows potential for real-time inference, YOLOv8 delivers significantly superior performance in terms of accuracy (mAP), making it the most effective solution for this application.
 
 **Dataset**
+
 Name: Yellow Sticky Traps (https://github.com/md-121/yellow-sticky-traps-dataset) 
+
 Images: 284 images, split into 227 for training and 57 for validation (approx. 80/20 ratio).
+
 Classes (3):
 - MR: Macrolophus pygmaeus
 - NC: Nesidiocoris tenuis
 - WF: Trialeurodes vaporariorum
+  
 Annotations: The original annotations are in PASCAL-VOC XML format. The preprocessing pipelines in the notebooks convert these annotations into the required formats for each framework.
 
 **Models and Experiments**
+
 This repository includes three notebooks, each corresponding to an experiment with a different model architecture:
-YOLOv4.ipynb
-EfficientDet.ipynb
-YoloV8.ipynb
+YOLOv4.ipynb;
+EfficientDet.ipynb;
+YoloV8.ipynb;
 
 **Results Summary**
 - YoloV4: Moderate/low performance, with difficulty detecting the 'WF' class.
@@ -29,10 +35,12 @@ YoloV8.ipynb
 - YOLOv8: Superior performance and converged successfully across all classes.
 
 **Conclusion**
+
 The comparative analysis demonstrated that YOLOv8 is the most robust and accurate architecture for this insect detection task. Its ability to generalize from pre-trained weights and its modern design far surpassed the performance of YOLOv4 and overcame the training challenges faced by EfficientDet in this specific context.
 
 
 # How to Use
+
 Each notebook is self-contained and can be run in an environment like Google Colab with a GPU enabled.
 
 - YOLOv4.ipynb:
@@ -43,6 +51,6 @@ To train: Run all cells in order.
 This notebook implements the EfficientDet-D0 architecture using PyTorch. It demonstrates the data preparation process (including conversion to COCO format) and the two-stage training cycle.
 To train: Run all cells. The notebook includes the head-only training phase and the full-model fine-tuning.
 
-- YoloV8.ipynb
+- YoloV8.ipynb:
 This notebook uses the official Ultralytics framework to train the YOLOv8 model. It handles the dataset download, annotation conversion, and the complete training and validation cycle.
 To train: Run all cells. The training process runs for 100 epochs and saves the results, including charts and weights, to the runs/detect/ directory.
