@@ -47,12 +47,13 @@ All experiments are designed to be run in an environment like Google Colab with 
 
 Clone the repository:
 
-'git clone https://github.com/annecollier/Object-Detection-of-Insects-Caught-by-Yellow-Sticky-Traps.git'
-'cd Object-Detection-of-Insects-Caught-by-Yellow-Sticky-Traps'
+`git clone https://github.com/annecollier/Object-Detection-of-Insects-Caught-by-Yellow-Sticky-Traps.git`
+
+`cd Object-Detection-of-Insects-Caught-by-Yellow-Sticky-Traps`
 
 Install dependencies:
 
-'pip install -r requirements.txt'
+`pip install -r requirements.txt`
 
 Run an experiment:
 
