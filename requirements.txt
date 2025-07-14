@@ -1,0 +1,21 @@
+# Dependencies for YOLOv8
+ultralytics
+
+# Dependencies for EfficientDet
+tensorboardX
+pycocotools-windows; sys_platform == 'win32'
+pycocotools; sys_platform != 'win32'
+
+# Dependencies for YOLOv4
+albumentations
+cython
+gdown
+
+# Common dependencies
+numpy
+torch
+torchvision
+Pillow
+tqdm
+pyyaml
+opencv-python
